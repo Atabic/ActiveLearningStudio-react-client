@@ -307,7 +307,7 @@ function PlaylistPreview(props) {
                     <div>
                       Share Activity
                       <Switch
-                        onColor="#084892"
+                        onColor="#333"
                         onChange={share}
                         checked={activityShared}
                         className="react-switch"

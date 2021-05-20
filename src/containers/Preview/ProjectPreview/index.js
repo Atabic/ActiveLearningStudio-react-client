@@ -215,7 +215,7 @@ function ProjectPreview(props) {
                         <div className="share-button">
                           Share Project
                           <Switch
-                            onColor="#5952c6"
+                            onColor="#333"
                             onChange={() => {
                               if (activeShared) {
                                 Swal.fire({

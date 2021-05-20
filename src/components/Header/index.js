@@ -1,4 +1,4 @@
-import React
+import React, { useEffect, useState }
 // ,{ useMemo }
   from 'react';
 import PropTypes from 'prop-types';
@@ -14,7 +14,7 @@ import
 //  getOrganizationFirstTime
 }
   from 'store/actions/organization';
-import logo from 'assets/images/studio_new_logo.png';
+import logo from 'assets/images/cc.logo.white.svg';
 import add from 'assets/images/add-icon.png';
 import profile from 'assets/images/user-profile.png';
 import searchImg from 'assets/images/search.png';
@@ -33,8 +33,16 @@ function Header(props) {
   const { /* user, */ logout } = props;
   const stateHeader = useSelector((state) => state.organization);
   const { permission: { Project } } = stateHeader;
-  const { permission } = stateHeader;
+  const { permission, currentOrganization } = stateHeader;
   const dispatch = useDispatch();
+  const [image, setImage] = useState(null);
+  useEffect(() => {
+    if (currentOrganization?.id === 1) {
+      setImage(null);
+    } else {
+      setImage(currentOrganization?.image);
+    }
+  }, [currentOrganization]);
   // useMemo(() => {
   //   dispatch(getOrganizationFirstTime(stateHeader?.currentOrganization?.id));
   // }, [stateHeader?.currentOrganization?.id]);
@@ -44,7 +52,7 @@ function Header(props) {
         <div className="group-search-logo">
           <div className="tophd_left">
             <Link to={`/org/${stateHeader?.currentOrganization?.domain}`} className="top_logo">
-              {stateHeader?.logo ? <img src={`${global.config.resourceUrl}${stateHeader.logo}`} alt="logo" title="" /> : <img src={logo} alt="logo" title="" />}
+              {image ? <img src={global.config.resourceUrl + image} alt="logo" title="" /> : <img src={logo} alt="logo" title="" />}
             </Link>
           </div>
         </div>

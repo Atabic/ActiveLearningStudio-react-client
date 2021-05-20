@@ -114,7 +114,7 @@
     margin: 15px;
     padding: 15px;
     background: #ffffff 0 0 no-repeat padding-box;
-    border-left: 2px solid #084892;
+    border-left: 2px solid #333;
     border-radius: 2px;
     box-shadow: 1px 1px 2px #7e7e7e1a;
     opacity: 1;
@@ -262,12 +262,12 @@
       font-size: 14px;
       font-weight: 400;
       text-align: center;
-      color: #5952c6;
+      color: #333;
       letter-spacing: 0;
       opacity: 1;
 
       &:hover {
-        background-color: #5952c6;
+        background-color: #333;
         color: #fff;
         text-decoration: none;
       }
@@ -464,7 +464,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #5952c6;
+    background-color: #333;
     border-radius: 20px;
     font-size: 14px;
     color: #fff;
@@ -492,7 +492,7 @@
     justify-content: center;
     align-items: center;
     float: right;
-    background-color: #5952c6;
+    background-color: #333;
     border-radius: 20px;
     font-size: 14px;
     text-align: center;
@@ -526,7 +526,7 @@
   }
 
   .nav-item.active {
-    background-color: #6e6d6d !important;
+    background-color: #00b5da !important;
     color: #fff !important;
 
     &:after {
@@ -538,8 +538,8 @@
       height: 0;
       border-left: 6px solid transparent;
       border-right: 6px solid transparent;
-      border-top: 10px solid #6e6d6d;
-      border-bottom-color: #6e6d6d;
+      border-top: 10px solid #00b5da;
+      border-bottom-color: #00b5da;
       transform: translate(-50%);
     }
   }
@@ -547,7 +547,7 @@
 
 .main-content-wrapper {
   width: 100%;
-  padding-top: 80px;
+  padding-top: 110px;
   padding-bottom: 45px;
   // display: flex;
   float: left;
@@ -957,7 +957,7 @@ body {
 .top-header {
   position: fixed;
   width: 100%;
-  height: 80px;
+  height: 110px;
   box-shadow: 0 5px 6px #00000026;
   z-index: 111;
   justify-content: space-between;
@@ -965,6 +965,9 @@ body {
   align-items: center;
   top: 0;
   padding: 0 30px;
+  background-image: linear-gradient( 
+90deg
+ ,#EE5B32,#FB7928,#EE5B32);
 }
 
 .closebtn {
@@ -1886,7 +1889,7 @@ a:hover {
   }
 
   button {
-    background: #5952c6 0 0 no-repeat padding-box;
+    background: #333 0 0 no-repeat padding-box;
     border-radius: 30px;
     width: 201px;
     height: 40px;
@@ -1906,7 +1909,7 @@ a:hover {
     }
 
     &:hover {
-      background: #5952c6 0 0 no-repeat padding-box;
+      background: #333 0 0 no-repeat padding-box;
     }
   }
 
@@ -2052,7 +2055,7 @@ a:hover {
 }
 
 .user-name-login {
-  color: #5952c6;
+  color: #333;
   font-weight: bold;
 }
 
@@ -2115,7 +2118,7 @@ a:hover {
     font-size: 14px;
     line-height: 19px;
     letter-spacing: 0;
-    color: #5952c6;
+    color: #333;
     opacity: 1;
 
     i {
@@ -2170,7 +2173,7 @@ a:hover {
 
 .back-header .go-back-button-preview,
 .sce_cont .go-back-button-preview {
-  background-color: #5952c6;
+  background-color: #333;
   display: block;
   color: #fff;
   width: fit-content;
@@ -2423,7 +2426,7 @@ a:hover {
   .right-sidegolf-info {
     min-height: 160px;
     padding: 0 !important;
-    background-color: #fff;
+    background-color: #e9e9e9;
     border-left: 1px solid #989da1;
     position: fixed;
     cursor: pointer;
@@ -2634,7 +2637,7 @@ a:hover {
     h3 {
       font-size: 16px;
       font-weight: bold;
-      color: #084892;
+      color: #333;
       span {
         font-size: 16px;
         font-weight: 400;
@@ -2655,7 +2658,7 @@ a:hover {
       line-height: 19px;
       padding-bottom: 0;
       letter-spacing: 0;
-      color: #084892;
+      color: #333;
       opacity: 1;
       border-bottom: none;
       margin: 0 !important;
@@ -2857,7 +2860,7 @@ a:hover {
   }
 
   .react-switch-handle {
-    border: 1px solid #5952c6 !important;
+    border: 1px solid #333 !important;
   }
 }
 
@@ -3055,7 +3058,7 @@ a:hover {
     }
 
     button {
-      background-color: #5952c6;
+      background-color: #333;
       color: #fff;
       width: 150px;
       border-radius: 5px;
@@ -3073,6 +3076,7 @@ a:hover {
 
 .footer-img-section{
   position: fixed;
+  background-color: #2b2b2b;
   bottom: 0;
   z-index: 1001;
   width: 100%;
@@ -3081,7 +3085,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #fff;
+ 
   box-shadow: 1px 1px 1px 1px #ddd;
   flex-direction: column;;
 
@@ -3091,7 +3095,7 @@ a:hover {
 
   a {
     padding-left: 30px;
-    color: $fun-blue-1;
+    color:#fff;
     font-size: 13px;
     font-weight: 600;
     text-decoration: underline;
@@ -3099,7 +3103,7 @@ a:hover {
 
   span {
     font-size: 10px;
-    color: #515151;
+    color:#fff;
   }
 }
 
@@ -3108,7 +3112,7 @@ a:hover {
   display: flex;
   justify-content: space-around;
   border: 1px solid #ccc;
-  color: #5952c6;
+  color: #333;
 
   div {
     width: 50%;
@@ -3126,7 +3130,7 @@ a:hover {
 
     &:hover {
       color: #fff;
-      background: #5952c6;
+     
     }
   }
 }
@@ -3290,11 +3294,11 @@ a:hover {
     .option_type {
       width: 50%;
       padding: 5px;
-      color: #084892;
+      color: #333;
       text-transform: capitalize;
 
       &:hover {
-        background-color: #084892;
+        background-color: #333;
         color: #fff;
       }
 
@@ -3399,7 +3403,7 @@ a:hover {
       p {
         font-weight: 300;
         font-size: 14px;
-        color: #084892;
+        color: #333;
       }
     }
   }
@@ -3425,7 +3429,7 @@ a:hover {
 
 .create-project .fa-plus-circle {
   font-size: 30px;
-  color: #084892;
+  color: #333;
 }
 
 .top-header.flex-div .dropdown-toggle {
@@ -3739,7 +3743,7 @@ a:hover {
     span {
       font-size: 12px;
       line-height: 16px;
-      color: #084892 !important;
+      color: #333 !important;
       padding-left: 10px !important;
       font-weight: bold;
     }

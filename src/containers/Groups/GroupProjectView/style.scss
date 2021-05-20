@@ -1,4 +1,4 @@
-$selected_color: #084892;
+$selected_color: #333;
 $filled: #44ca92;
 
 .group-information {
@@ -113,8 +113,8 @@ $filled: #44ca92;
                   //margin-left: -4px;
 
                   &:hover {
-                    background: #5952c6;
-                    border-color: #5952c6;
+                    background: #333;
+                    border-color: #333;
                     color: #ffffff;
                   }
                 }

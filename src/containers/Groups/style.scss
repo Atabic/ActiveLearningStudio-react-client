@@ -52,8 +52,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #084892;
-    border-color: #084892;
+    background: #333;
+    border-color: #333;
     border-radius: 20px;
     font-size: 14px;
     text-align: center;
@@ -62,7 +62,7 @@
 
     .fa {
       margin-right: 5px;
-      -webkit-text-stroke: 1px #084892;
+      -webkit-text-stroke: 1px #333;
     }
 
     &:disabled {
@@ -80,7 +80,7 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 20px;
-    color: #084892;
+    color: #333;
 
     &.project-title {
       padding-top: 7px;
@@ -103,7 +103,7 @@
   }
 
   .dashboard-panel-header-row {
-    border-left: solid 5px #084892;
+    border-left: solid 5px #333;
   }
 
   .btn {
@@ -118,7 +118,7 @@
   }
 
   .offer-panel {
-    border: solid 3px #084892;
+    border: solid 3px #333;
   }
 
   .metrics-counters span {
@@ -155,7 +155,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #5952c6;
+    background-color: #333;
     border-radius: 20px;
     font-size: 14px;
     text-align: center;
