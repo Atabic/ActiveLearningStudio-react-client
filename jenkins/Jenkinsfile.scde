@@ -1,4 +1,4 @@
-node("currikiscde") {
+node("currikidev") {
     def app
     
     stage('Clone repository') {               
