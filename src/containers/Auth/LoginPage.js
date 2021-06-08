@@ -10,6 +10,7 @@ import { GoogleLogin } from 'react-google-login';
 import bg from 'assets/images/loginbg.png';
 import bg1 from 'assets/images/loginbg2.png';
 import loader from 'assets/images/loader.svg';
+import redHet from 'assets/images/red-hat.png';
 import { loginAction, googleLoginAction } from 'store/actions/auth';
 import { getErrors } from 'utils';
 import Error from './Error';
@@ -103,14 +104,11 @@ class LoginPage extends React.Component {
 
     return (
       <div className="auth-page">
-        <Logo />
-
-        <div className="auth-container">
-          <div className="d-flex align-items-center justify-content-between">
-            <h1 className="auth-title mb-0">Login to CurrikiStudio</h1>
-
-            <strong>OR</strong>
-
+        <header>
+          <div className="header-login-logo">
+            <img src={redHet} alt="red-het" />
+          </div>
+          <div className="header-login-btn">
             <button
               type="button"
               className="btn btn-outline-primary text-uppercase"
@@ -118,6 +116,15 @@ class LoginPage extends React.Component {
             >
               Sign Up
             </button>
+          </div>
+        </header>
+        <Logo />
+
+        <div className="auth-container">
+          <div className="d-flex align-items-center justify-content-between">
+            <h1 className="auth-title mb-0">Login to CurrikiStudio</h1>
+
+            <strong>OR</strong>
           </div>
 
           <h2 className="auth-subtitle">Powering the creation of the world’s Most Immersive Learning Experience</h2>

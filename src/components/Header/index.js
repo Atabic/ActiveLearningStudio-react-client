@@ -5,14 +5,13 @@ import { Link } from 'react-router-dom';
 import { Dropdown } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import
-{
-// setActiveOrganization,
+import {
+  // setActiveOrganization,
   updateOrganizationScreen,
-//  getOrganizationFirstTime
+  //  getOrganizationFirstTime
 }
   from 'store/actions/organization';
-import logo from 'assets/images/safari.png';
+import logo from 'assets/images/red-hat.png';
 import add from 'assets/images/add-icon.png';
 import profile from 'assets/images/user-profile.png';
 import searchImg from 'assets/images/search.png';

@@ -1,6 +1,8 @@
 @import 'assets/css/index';
 
 .top-header {
+  background: #000 !important;
+  
   .dropdown-toggle {
     background: transparent !important;
     border: none !important;
@@ -9,6 +11,50 @@
 
     &:after {
       border-top-color: gray;
+    }
+  }
+
+  .navbar-link{
+    .top-info{
+      li{
+        a{
+          .header-icon-text{
+            color: #fff;
+            font-size: 12px;
+            // font-weight: 300;
+          }
+        }
+        .dropdown-multitenancy{
+          button{
+            .text{
+              color: #fff;
+              font-size: 12px;
+            }
+          }
+        }
+        .create-project{
+          button{
+            .header-icon-text{
+              color: #fff;
+              font-size: 12px;
+            }
+          }
+        }
+        .dropdown{
+          button{
+            .notification-alert{
+              .header-icon-text{
+                color: #fff;
+                font-size: 12px;
+              }
+            }
+            .header-icon-text{
+              color: #fff;
+              font-size: 12px;
+            }
+          }
+        }
+      }
     }
   }
 

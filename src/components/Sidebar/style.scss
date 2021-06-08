@@ -98,6 +98,7 @@ aside {
 
     svg {
       margin-left: 10px;
+      color: rgb(238, 0, 0);
     }
   }
 
@@ -115,6 +116,9 @@ aside {
     &:hover {
       cursor: pointer;
       text-decoration: none !important;
+    }
+    svg{
+      color: rgb(238, 0, 0);
     }
   }
 

@@ -114,7 +114,7 @@
     margin: 15px;
     padding: 15px;
     background: #ffffff 0 0 no-repeat padding-box;
-    border-left: 2px solid #084892;
+    border-left: 2px solid rgb(238, 0, 0);
     border-radius: 2px;
     box-shadow: 1px 1px 2px #7e7e7e1a;
     opacity: 1;
@@ -521,12 +521,12 @@
     padding: 12px 30px;
     background-color: #fff !important;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 700;
     color: $curriki-main-blue !important;
   }
 
   .nav-item.active {
-    background-color: #6e6d6d !important;
+    background-color: rgb(238, 0, 0) !important;
     color: #fff !important;
 
     &:after {
@@ -538,8 +538,8 @@
       height: 0;
       border-left: 6px solid transparent;
       border-right: 6px solid transparent;
-      border-top: 10px solid #6e6d6d;
-      border-bottom-color: #6e6d6d;
+      border-top: 10px solid rgb(238, 0, 0);
+      border-bottom-color: rgb(238, 0, 0);
       transform: translate(-50%);
     }
   }
@@ -1382,7 +1382,7 @@ header.head_mobile {
 
 .title-md {
   font-size: 22px;
-  color: #21448e;
+  color: #131313;
   font-family: $rubik, sans-serif;
   font-weight: 600;
   line-height: 100%;
@@ -1829,6 +1829,7 @@ a:hover {
       padding-top: 0;
       display: flex;
       flex: 50%;
+      color: #131313;
     }
 
     .react-touch {
@@ -1886,7 +1887,7 @@ a:hover {
   }
 
   button {
-    background: #5952c6 0 0 no-repeat padding-box;
+    background: #131313 0 0 no-repeat padding-box;
     border-radius: 30px;
     width: 201px;
     height: 40px;
@@ -1906,7 +1907,7 @@ a:hover {
     }
 
     &:hover {
-      background: #5952c6 0 0 no-repeat padding-box;
+      background: rgb(238, 0, 0) 0 0 no-repeat padding-box;
     }
   }
 
@@ -1950,7 +1951,12 @@ a:hover {
     padding: 0;
     max-width: 268px;
     word-break: break-all;
+    
   }
+  .badge-success{
+    background: #06b !important;
+  }
+  
 
   .list {
     width: 365px;
@@ -2079,7 +2085,7 @@ a:hover {
     font-size: 16px;
     line-height: 22px;
     letter-spacing: 0;
-    color: $mine-shaft;
+    color: #06b;
     opacity: 1;
     border: none;
     text-transform: capitalize;
@@ -2091,6 +2097,7 @@ a:hover {
 
     svg {
       margin-right: 7px;
+      color: #06b;
     }
 
     @media (max-width: 767px) {
@@ -2170,7 +2177,7 @@ a:hover {
 
 .back-header .go-back-button-preview,
 .sce_cont .go-back-button-preview {
-  background-color: #5952c6;
+  background-color: #131313;
   display: block;
   color: #fff;
   width: fit-content;
@@ -2634,7 +2641,7 @@ a:hover {
     h3 {
       font-size: 16px;
       font-weight: bold;
-      color: #084892;
+      color: #131313;
       span {
         font-size: 16px;
         font-weight: 400;
@@ -3076,18 +3083,26 @@ a:hover {
   bottom: 0;
   z-index: 1001;
   width: 100%;
-  height: 65px;
+  height: 55px;
   padding: 10px 30px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background: #fff;
+  background: #000;
   box-shadow: 1px 1px 1px 1px #ddd;
-  flex-direction: column;;
+  // flex-direction: column;
+
 
   .footer-all {
     display: flex;
+    margin-left: 265px;
+
+    a{
+      color: #fff;
+    }
+
   }
+
 
   a {
     padding-left: 30px;
@@ -3099,8 +3114,18 @@ a:hover {
 
   span {
     font-size: 10px;
-    color: #515151;
+    color: #fff;
   }
+
+  .cc-logo{
+    width: 40px;
+    margin-right: 7px;
+  }
+  .by-logo{
+    width: 40px;
+    margin-right: 20px;
+  }
+  
 }
 
 .config_options {
