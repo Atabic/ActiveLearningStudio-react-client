@@ -24,7 +24,7 @@ node("currikidev") {
     
     parallel(
             "StageA": {
-                if(Jenkins.instance.getNode('currikishepherds').toComputer().isOnline()){
+                if(Jenkins.instance.getNode('currikicc').toComputer().isOnline()){
                     node('currikicc') {
                         stage ('currikicc') {
                                 echo 'Copy'
