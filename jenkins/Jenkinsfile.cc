@@ -17,7 +17,7 @@ node("currikidev") {
     stage('Push image') {	
         docker.withRegistry('https://quay.io', 'docker-private-credentials') {            
             app.push("${env.BUILD_NUMBER}")            
-            app.push("currikicc")        
+            app.push("cc")        
         }    
          
     }
@@ -28,7 +28,7 @@ node("currikidev") {
                     node('currikicc') {
                         stage ('currikicc') {
                                 echo 'Copy'
-                                sh "yes | docker stack deploy --compose-file /curriki/docker-compose-shepherds.yml currikistack" 
+                                sh "yes | docker stack deploy --compose-file /curriki/docker-compose-cc.yml currikistack" 
                                 echo 'Copy completed'
                         }
                     }
