@@ -443,11 +443,12 @@
   flex-direction: column;
 
   &:after {
-    content: url('../../assets/images/path.png');
+    // content: url('../../assets/images/path.png');
     position: absolute;
     right: 10px;
     top: 0px;
     z-index:-1
+    
   }
   div.text{
     text-overflow: ellipsis;
@@ -469,6 +470,8 @@
 
     img {
       margin-bottom: 3px;
+      margin-top: -5px;
+      // width: 28px;
     }
     p{
       font-size: 9px;

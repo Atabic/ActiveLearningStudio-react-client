@@ -5,14 +5,16 @@ import { withRouter } from 'react-router-dom';
 import validator from 'validator';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Swal from 'sweetalert2';
+import Footer from 'components/Footer';
 import QueryString from 'query-string';
 import bg from 'assets/images/loginbg.png';
 import bg1 from 'assets/images/loginbg2.png';
 import loader from 'assets/images/loader.svg';
+import redHet from 'assets/images/header-logo-1.png';
 import { registerAction, loadOrganizationTypesAction } from 'store/actions/auth';
 import { getErrors } from 'utils';
 import Error from './Error';
-import Logo from './Logo';
+// import Logo from './Logo';
 
 import './style.scss';
 // eslint-disable-next-line no-restricted-globals
@@ -151,14 +153,12 @@ class RegisterPage extends React.Component {
 
     return (
       <div className="auth-page">
-        <Logo />
-
-        <div className="auth-container">
-          <div className="d-flex align-items-center justify-content-between">
-            <h1 className="auth-title mb-0">Register for CurrikiStudio</h1>
-
-            <strong>OR</strong>
-
+        {/* <Logo /> */}
+        <header>
+          <div className="header-login-logo">
+            <img src={redHet} alt="red-het" style={{ height: '25px' }} />
+          </div>
+          <div className="header-login-btn">
             <button
               type="button"
               className="btn btn-outline-primary text-uppercase"
@@ -166,6 +166,14 @@ class RegisterPage extends React.Component {
             >
               Login
             </button>
+          </div>
+        </header>
+
+        <div className="auth-container">
+          <div className="d-flex align-items-center justify-content-between">
+            <h1 className="auth-title mb-0">Register for CurrikiStudio</h1>
+
+            {/* <strong>OR</strong> */}
           </div>
 
           <h2 className="auth-subtitle">Powering the creation of the world’s Most Immersive Learning Experience</h2>
@@ -300,6 +308,8 @@ class RegisterPage extends React.Component {
 
         <img src={bg} className="bg1" alt="" />
         <img src={bg1} className="bg2" alt="" />
+
+        <Footer />
       </div>
     );
   }

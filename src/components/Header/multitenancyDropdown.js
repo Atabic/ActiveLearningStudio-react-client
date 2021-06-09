@@ -11,7 +11,7 @@ import {
   setActiveOrganization,
   getAllPermission,
 } from 'store/actions/organization';
-import menu from 'assets/images/menu_square.png';
+import menu from 'assets/images/test-1.png';
 
 export default function MultitenancyDropdown() {
   const dispatch = useDispatch();

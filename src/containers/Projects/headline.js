@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import foldericon from 'assets/images/sidebar/folder-icon.png';
+import foldericon from 'assets/images/project-folder.png';
 import { useSelector } from 'react-redux';
 import { setCurrentVisibilityType } from 'store/actions/project';
 

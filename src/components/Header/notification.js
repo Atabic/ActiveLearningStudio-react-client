@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Dropdown } from 'react-bootstrap';
 import { useSelector, useDispatch } from 'react-redux';
-import bell from 'assets/images/bell.png';
+import bell from 'assets/images/ball-notif.png';
 
 import { getAllNotifications, clearAllNotification } from 'store/actions/notification';
 import NotificationArea from 'containers/Notification/NotificationArea';
@@ -50,40 +50,40 @@ function HeaderNotification() {
             </div>
             {notificationData.today && Object.keys(notificationData.today).length > 0
               && (
-              <>
-                <div className="notification-status"> Today </div>
-                {notificationData.today.map((msg) => (
-                  <Dropdown.Item key={msg.id}>
-                    <NotificationArea content={msg} />
-                  </Dropdown.Item>
-                ))}
-              </>
+                <>
+                  <div className="notification-status"> Today </div>
+                  {notificationData.today.map((msg) => (
+                    <Dropdown.Item key={msg.id}>
+                      <NotificationArea content={msg} />
+                    </Dropdown.Item>
+                  ))}
+                </>
               )}
 
             {notificationData.yesterday && Object.keys(notificationData.yesterday).length > 0
               && (
-              <>
-                <div className="notification-status"> Yesterday </div>
-                {notificationData.yesterday.map((msg) => (
-                  <Dropdown.Item key={msg.id}>
-                    <NotificationArea content={msg} />
-                  </Dropdown.Item>
-                ))}
-              </>
+                <>
+                  <div className="notification-status"> Yesterday </div>
+                  {notificationData.yesterday.map((msg) => (
+                    <Dropdown.Item key={msg.id}>
+                      <NotificationArea content={msg} />
+                    </Dropdown.Item>
+                  ))}
+                </>
               )}
 
             {notificationData.older && Object.keys(notificationData.older).length > 0
               && (
-              <>
-                <div className="notification-status"> Older </div>
-                {notificationData.older.map((msg) => (
-                  <Dropdown.Item key={msg.id}>
-                    <NotificationArea content={msg} />
-                  </Dropdown.Item>
-                ))}
-              </>
+                <>
+                  <div className="notification-status"> Older </div>
+                  {notificationData.older.map((msg) => (
+                    <Dropdown.Item key={msg.id}>
+                      <NotificationArea content={msg} />
+                    </Dropdown.Item>
+                  ))}
+                </>
               )}
-            {errorNotification && <div className="error-notification">{errorNotification}</div> }
+            {errorNotification && <div className="error-notification">{errorNotification}</div>}
           </div>
           <div className="btn-all-notification">
             <Dropdown.Item className="all-notification" as={Link} to={`/org/${organization.currentOrganization?.domain}/notification`}>

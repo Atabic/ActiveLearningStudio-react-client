@@ -11,9 +11,9 @@ import {
   //  getOrganizationFirstTime
 }
   from 'store/actions/organization';
-import logo from 'assets/images/red-hat.png';
-import add from 'assets/images/add-icon.png';
-import profile from 'assets/images/user-profile.png';
+import logo from 'assets/images/header-logo-1.png';
+// import add from 'assets/images/add-icon.png';
+import profile from 'assets/images/profile-4.png';
 import searchImg from 'assets/images/search.png';
 import createProjectIcon from 'assets/images/create-project-icon.png';
 // import help from 'assets/images/help.png';
@@ -50,7 +50,7 @@ function Header(props) {
         <div className="group-search-logo">
           <div className="tophd_left">
             <Link to={`/org/${stateHeader?.currentOrganization?.domain}`} className="top_logo">
-              {image ? <img src={global.config.resourceUrl + image} alt="logo" title="" /> : <img src={logo} style={{ height: '30px' }} alt="logo" title="" />}
+              {image ? <img src={global.config.resourceUrl + image} alt="logo" title="" /> : <img src={logo} style={{ height: '25px' }} alt="logo" title="" />}
             </Link>
           </div>
         </div>
@@ -72,7 +72,7 @@ function Header(props) {
                         }
                       }}
                     >
-                      <FontAwesomeIcon icon="briefcase" />
+                      <FontAwesomeIcon icon="briefcase" className="text-white" />
                       <p className="header-icon-text">
                         Manage Organization
                         {/* {stateHeader.currentOrganization?.domain} */}
@@ -96,7 +96,8 @@ function Header(props) {
                 <li className="align-items-center" style={{ paddingTop: '4px' }}>
                   <Dropdown className="create-project">
                     <Dropdown.Toggle className="align-items-center">
-                      <img src={add} alt="add" />
+                      {/* <img src={add} alt="add" /> */}
+                      <FontAwesomeIcon icon="plus" className="text-white fa-2x" />
                       <p className="header-icon-text">Create</p>
                     </Dropdown.Toggle>
                     <Dropdown.Menu className="user-dropdown">
@@ -128,7 +129,7 @@ function Header(props) {
               <li className="menu-user-settings d-flex align-items-center">
                 <Dropdown>
                   <Dropdown.Toggle className="align-items-center">
-                    <img src={profile} alt="user" title="" />
+                    <img src={profile} alt="user" title="" style={{ width: '35px' }} />
                     <p className="header-icon-text">Profile</p>
                   </Dropdown.Toggle>
 

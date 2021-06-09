@@ -4,9 +4,9 @@ import { Link, withRouter } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import foldericon from 'assets/images/sidebar/folder-icon.png';
-import teamicon from 'assets/images/sidebar/team-icon.png';
-import dashboardicon from 'assets/images/sidebar/dashboard-icon.png';
+import foldericon from 'assets/images/my-project.png';
+import teamicon from 'assets/images/sidebar-team.png';
+import dashboardicon from 'assets/images/sidebar-dashbord.png';
 import backgroundimg from 'assets/images/sidebar/background.png';
 
 import {
@@ -103,7 +103,7 @@ function Sidebar(props) {
       {true && (
         <Link to={`/org/${organization.currentOrganization?.domain}/dashboard`}>
           <div className="menu-title">
-            <img src={dashboardicon} alt="" />
+            <img src={dashboardicon} alt="" style={{ marginBottom: '4px', marginRight: '8px' }} />
             Dashboard & Stats
           </div>
         </Link>
@@ -160,10 +160,10 @@ function Sidebar(props) {
           ))}
           {allState.sidebar.teams.length > 0
             && (
-            <Link className="expand" style={{ paddingLeft: '20px', borderTop: 'none' }} to={`/org/${allState.organization.currentOrganization?.domain}/teams`}>
-              Explore All Teams
-              <FontAwesomeIcon icon="arrow-right" className="ml-2" />
-            </Link>
+              <Link className="expand" style={{ paddingLeft: '20px', borderTop: 'none' }} to={`/org/${allState.organization.currentOrganization?.domain}/teams`}>
+                Explore All Teams
+                <FontAwesomeIcon icon="arrow-right" className="ml-2" />
+              </Link>
             )}
         </>
       )}
@@ -229,10 +229,10 @@ function Sidebar(props) {
           ))}
           {allState.sidebar.groups.length > 0
             && (
-            <Link className="expand" style={{ paddingLeft: '20px', borderTop: 'none' }} to={`/org/${allState.organization.currentOrganization?.domain}/groups`}>
-              Explore All Groups
-              <FontAwesomeIcon icon="arrow-right" className="ml-2" />
-            </Link>
+              <Link className="expand" style={{ paddingLeft: '20px', borderTop: 'none' }} to={`/org/${allState.organization.currentOrganization?.domain}/groups`}>
+                Explore All Groups
+                <FontAwesomeIcon icon="arrow-right" className="ml-2" />
+              </Link>
             )}
         </>
       )}
