@@ -84,14 +84,14 @@ function SearchInterface(props) {
   const [activeSubject, setActiveSubject] = useState([]);
   const [activeEducation, setActiveEducation] = useState([]);
   const [searchType, setSearchType] = useState(null);
-  const [author,SetAuthor] = useState('');
+  const [author, SetAuthor] = useState('');
   const [selectedAuthor, setSelectedAuthor] = useState([]);
   const [authors, setAuthors] = useState([]);
   var activeSubject1;
-//   useMemo(() => {
+  //   useMemo(() => {
 
-// activeSubject1 = activeSubject.map((data1) => data1.replace('and', '&'))
-//   },[activeSubject])
+  // activeSubject1 = activeSubject.map((data1) => data1.replace('and', '&'))
+  //   },[activeSubject])
   useMemo(() => {
     setActiveEducation([]);
     setActiveSubject([]);
@@ -126,7 +126,7 @@ function SearchInterface(props) {
     if (query?.q) {
       setSearchInput(query?.q);
     }
-  // eslint-disable-next-line no-restricted-globals
+    // eslint-disable-next-line no-restricted-globals
   }, [location.search]);
   window.onbeforeunload = () => {
     localStorage.setItem('refreshPage', 'true');
@@ -306,7 +306,7 @@ function SearchInterface(props) {
                       <Card>
                         <Accordion.Toggle as={Card.Header} eventKey="0">
                           Search Library
-                          <FontAwesomeIcon className="ml-2" icon="plus" />
+                          <FontAwesomeIcon className="ml-2 text-danger" icon="plus" />
                         </Accordion.Toggle>
 
                         <Accordion.Collapse eventKey="0">
@@ -431,7 +431,7 @@ function SearchInterface(props) {
                                   </label>
                                 </div>
                               </div>
-                              <div className="form-group" style={{ display: permission?.Organization?.includes('organization:view-user') && searchType !== 'private' ? 'block' : 'none'}}>
+                              <div className="form-group" style={{ display: permission?.Organization?.includes('organization:view-user') && searchType !== 'private' ? 'block' : 'none' }}>
                                 <input
                                   placeholder="Enter author name"
                                   className="author"
@@ -448,17 +448,17 @@ function SearchInterface(props) {
                                     <div className="author-box" data-list="true" key={u.id}>
                                       <div
                                         onClick={() => {
-                                          setSelectedAuthor([ ...selectedAuthor, u ]);
+                                          setSelectedAuthor([...selectedAuthor, u]);
                                           setAuthors([...authors, u.id]);
                                           SetAuthor('');
                                         }}
                                       >
                                         <div className="invite-member-name-mark">
-                                          <span>{`${u.first_name[0] || ''}${u.last_name[0] || ''}` }</span>
+                                          <span>{`${u.first_name[0] || ''}${u.last_name[0] || ''}`}</span>
                                         </div>
 
                                         <div className="invite-member-info">
-                                          <h2 className="invite-member-name">{`${`${u.first_name } ${u.last_name}`} (${u.email})`}</h2>
+                                          <h2 className="invite-member-name">{`${`${u.first_name} ${u.last_name}`} (${u.email})`}</h2>
                                         </div>
                                       </div>
                                     </div>
@@ -571,7 +571,7 @@ function SearchInterface(props) {
                       <Card>
                         <Accordion.Toggle as={Card.Header} eventKey="0">
                           Subject
-                          <FontAwesomeIcon className="ml-2" icon="plus" />
+                          <FontAwesomeIcon className="ml-2 text-danger" icon="plus" />
                         </Accordion.Toggle>
                         <Accordion.Collapse eventKey="0">
                           <Card.Body>
@@ -583,14 +583,14 @@ function SearchInterface(props) {
                                 onClick={() => {
                                   if (activeSubject.includes(data.subject)) {
 
-                                    if(data.subject==='Career & Technical Education') {
+                                    if (data.subject === 'Career & Technical Education') {
 
                                       setActiveSubject(activeSubject.filter((index) => {
-                                        if(index == 'Career & Technical Education' || index == 'Career and Technical Education'){
+                                        if (index == 'Career & Technical Education' || index == 'Career and Technical Education') {
                                           return false
-                                         }else {
+                                        } else {
                                           return true
-                                         }
+                                        }
                                       }));
 
                                     } else {
@@ -601,16 +601,16 @@ function SearchInterface(props) {
                                   }
                                 }}
                               >
-                                {data.subject==='Career & Technical Education'
-                                  ? (activeSubject.includes('Career & Technical Education') || activeSubject.includes('Career and Technical Education'))?
-                                <FontAwesomeIcon icon="check-square" />:<FontAwesomeIcon icon="square" />
+                                {data.subject === 'Career & Technical Education'
+                                  ? (activeSubject.includes('Career & Technical Education') || activeSubject.includes('Career and Technical Education')) ?
+                                    <FontAwesomeIcon icon="check-square" /> : <FontAwesomeIcon icon="square" />
 
-                                :
-                                 activeSubject.includes(data.subject) ? (
-                                  <FontAwesomeIcon icon="check-square" />
-                                ) : (
-                                  <FontAwesomeIcon icon="square" />
-                                )}
+                                  :
+                                  activeSubject.includes(data.subject) ? (
+                                    <FontAwesomeIcon icon="check-square" />
+                                  ) : (
+                                    <FontAwesomeIcon icon="square" />
+                                  )}
                                 <span>{data.subject}</span>
                               </div>
                             ))}
@@ -621,7 +621,7 @@ function SearchInterface(props) {
                       <Card>
                         <Accordion.Toggle as={Card.Header} eventKey="1">
                           Education Level
-                          <FontAwesomeIcon className="ml-2" icon="plus" />
+                          <FontAwesomeIcon className="ml-2 text-danger" icon="plus" />
                         </Accordion.Toggle>
 
                         <Accordion.Collapse eventKey="1">
@@ -633,14 +633,14 @@ function SearchInterface(props) {
                                 value={data.name}
                                 onClick={() => {
                                   if (activeEducation.includes(data.name)) {
-                                    if(data.name==='College & Beyond') {
+                                    if (data.name === 'College & Beyond') {
 
                                       setActiveSubject(activeEducation.filter((index) => {
-                                        if(index == 'College & Beyondn' || index == 'College and Beyond'){
+                                        if (index == 'College & Beyondn' || index == 'College and Beyond') {
                                           return false
-                                         }else {
+                                        } else {
                                           return true
-                                         }
+                                        }
                                       }));
 
                                     } else {
@@ -652,16 +652,16 @@ function SearchInterface(props) {
                                   }
                                 }}
                               >
-                                {data.name==='College & Beyond'
-                                  ? (activeEducation.includes('College & Beyond') || activeEducation.includes('College and Beyond'))?
-                                <FontAwesomeIcon icon="check-square" />:<FontAwesomeIcon icon="square" />
+                                {data.name === 'College & Beyond'
+                                  ? (activeEducation.includes('College & Beyond') || activeEducation.includes('College and Beyond')) ?
+                                    <FontAwesomeIcon icon="check-square" /> : <FontAwesomeIcon icon="square" />
 
-                                :
-                                activeEducation.includes(data.name) ? (
-                                  <FontAwesomeIcon icon="check-square" />
-                                ) : (
-                                  <FontAwesomeIcon icon="square" />
-                                )}
+                                  :
+                                  activeEducation.includes(data.name) ? (
+                                    <FontAwesomeIcon icon="check-square" />
+                                  ) : (
+                                    <FontAwesomeIcon icon="square" />
+                                  )}
 
                                 <span>{data.name}</span>
                               </div>
@@ -673,7 +673,7 @@ function SearchInterface(props) {
                       <Card>
                         <Accordion.Toggle as={Card.Header} eventKey="3">
                           Type of Activity
-                          <FontAwesomeIcon className="ml-2" icon="plus" />
+                          <FontAwesomeIcon className="ml-2 text-danger" icon="plus" />
                         </Accordion.Toggle>
                         <Accordion.Collapse eventKey="3">
                           <Card.Body
@@ -718,22 +718,22 @@ function SearchInterface(props) {
                     onSelect={async (e) => {
                       if (e === 'total') {
                         let searchData;
-                        if(searchType === 'orgSearch') {
+                        if (searchType === 'orgSearch') {
                           searchData = {
-                           from: 0,
-                           size: 20,
-                           type: searchType,
-                           authors: authors,
-                           subjectArray: activeSubject,
-                           gradeArray: activeEducation,
-                           standardArray: activeType,
-                         };
+                            from: 0,
+                            size: 20,
+                            type: searchType,
+                            authors: authors,
+                            subjectArray: activeSubject,
+                            gradeArray: activeEducation,
+                            standardArray: activeType,
+                          };
                         } else {
                           searchData = {
                             phrase: searchQueries.trim(),
                             from: 0,
                             size: 20,
-                            authors:authors,
+                            authors: authors,
                             type: searchType,
                             subjectArray: activeSubject,
                             gradeArray: activeEducation,
@@ -756,22 +756,22 @@ function SearchInterface(props) {
                         let searchData;
                         if (searchType === 'orgSearch') {
                           searchData = {
-                           from: 0,
-                           size: 20,
-                           authors: authors,
-                           model: e,
-                           type: searchType,
-                           subjectArray: activeSubject,
-                           gradeArray: activeEducation,
-                           standardArray: activeType,
-                         };
+                            from: 0,
+                            size: 20,
+                            authors: authors,
+                            model: e,
+                            type: searchType,
+                            subjectArray: activeSubject,
+                            gradeArray: activeEducation,
+                            standardArray: activeType,
+                          };
                         } else {
                           searchData = {
                             phrase: searchQueries.trim(),
                             from: 0,
                             size: 20,
                             model: e,
-                            authors:authors,
+                            authors: authors,
                             type: searchType,
                             subjectArray: activeSubject,
                             gradeArray: activeEducation,

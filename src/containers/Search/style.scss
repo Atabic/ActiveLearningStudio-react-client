@@ -117,7 +117,8 @@
         cursor: pointer;
 
         &:hover {
-          background-color: #5952c6;
+          background-color: rgb(230, 0, 0);
+          border: 2px solid #131313;
           color: #fff;
         }
       }
@@ -159,7 +160,7 @@
         border:1px solid #333;
       }
       svg.fa-check-square{
-        color:$curriki-main-blue;
+        color: rgb(230, 0, 0);
       }
     }
 
@@ -192,10 +193,10 @@
       padding: 25px;
 
       a.active {
-        background: $curriki-main-blue 0% 0% no-repeat padding-box;
+        background: rgb(230, 0, 0) 0% 0% no-repeat padding-box;
         opacity: 1;
         color: #fff;
-        border: 1px solid $curriki-main-blue;
+        border: 1px solid rgb(230, 0, 0);
         border-radius: 0;
       }
 
@@ -213,6 +214,10 @@
 
         &:last-child {
           border-right: 1px solid $mine-shaft;
+        }
+
+        &:hover{
+          border: 1px solid rgb(230, 0, 0) !important;
         }
       }
     }
@@ -438,6 +443,7 @@
 
   .card-header {
     padding: 0;
+
   }
 
   .top-card.card-header {

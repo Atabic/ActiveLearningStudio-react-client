@@ -32,7 +32,7 @@ function SearchForm() {
   } = useSelector((state) => state.organization);
 
   useEffect(() => {
-    if (activityTypesState.length === 0) {
+    if (activityTypesState?.length === 0) {
       dispatcher(loadResourceTypesAction());
     }
   }, []);
@@ -263,11 +263,11 @@ function SearchForm() {
                           }}
                         >
                           <div className="invite-member-name-mark">
-                            <span>{`${u.first_name[0] || ''}${u.last_name[0] || ''}` }</span>
+                            <span>{`${u.first_name[0] || ''}${u.last_name[0] || ''}`}</span>
                           </div>
 
                           <div className="invite-member-info">
-                            <h2 className="invite-member-name">{`${`${u.first_name } ${u.last_name}`} (${u.email})`}</h2>
+                            <h2 className="invite-member-name">{`${`${u.first_name} ${u.last_name}`} (${u.email})`}</h2>
                           </div>
                         </div>
                       </div>
