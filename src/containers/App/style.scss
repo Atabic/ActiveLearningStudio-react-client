@@ -3847,3 +3847,28 @@ a:hover {
     width: 50px;
   }
 }
+
+
+.react-responsive-modal-modal {
+
+  .img-logo img {
+    width:200px;
+    margin-right: 100px;
+    margin-bottom: 10px;
+  }
+  .coming-soon {
+    font-size: 28px;
+    text-decoration: bold;
+    padding-top: 40px;
+
+    p {
+      font-size: 14px;
+      margin:0;
+      padding: 0;
+    }
+
+    a {
+      padding-left: 5px;
+    }
+  }
+}
