@@ -10,7 +10,8 @@ import HeadingText from "utils/HeadingText/headingtext";
 import PlaylistCard from "containers/Playlists/PlaylistCard";
 import ProjectPlayListCard from "utils/ProjectPlayListCard/projectplaylistcard";
 import PlayListImage from "assets/images/svg/playlist1.svg";
-
+import PlayCardImage1 from "assets/images/artcourseimg.png";
+import PlayCardImage2 from "assets/images/cardlistimg.png";
 const MyProjectMain = () => {
   const playList1 = [
     { img: PlayListImage, title: "Guess the Answer" },
@@ -59,10 +60,18 @@ const MyProjectMain = () => {
           </div>
           <div className="project-playlist-card">
             <div className="playlist-card">
-              <ProjectPlayListCard playList={playList1} />
+              <ProjectPlayListCard
+                title="Project name #2"
+                playList={playList1}
+                backgroundImg={PlayCardImage1}
+              />
             </div>
             <div className="playlist-card">
-              <ProjectPlayListCard playList={playList2} />
+              <ProjectPlayListCard
+                title="Art Course"
+                playList={playList2}
+                backgroundImg={PlayCardImage2}
+              />
             </div>
           </div>
         </div>

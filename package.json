@@ -82,7 +82,8 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^4.2.5",
-    "lint-staged": "^10.2.11"
+    "lint-staged": "^10.2.11",
+    "storybook-utils": "https://github.com/ActiveLearningStudio/Design-System.git"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
