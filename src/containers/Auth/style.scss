@@ -260,7 +260,7 @@
 
     .form-group {
       position: relative;
-      margin-bottom: 20px;
+      margin-bottom: 2.5rem;
 
       @media (max-width: 767px){
         margin-bottom: 25px;
@@ -268,16 +268,17 @@
 
       .back-button {
         height: 30px;
-        background: $curriki-main-blue 0 0 no-repeat padding-box;
-        border-color: $curriki-main-blue;
+        background: #084892 0 0 no-repeat padding-box;
+        border-color: #084892;
         font-weight: 400;
-        font-size: 19px;
+        font-size: 14px;
         line-height: 26px;
         border-radius: 0.25rem;
         float: right;
         letter-spacing: 0.76px;
-        color: #ffffff;
+        color: #FFFFFF;
         opacity: 1;
+        padding-bottom: 20px;
       }
       .svg-inline--fa {
         position: absolute;
@@ -334,6 +335,17 @@
         }
       }
     
+      .get-started-btn{
+        background: #084892;
+    border: 1px solid #084892;
+    box-sizing: border-box;
+    border-radius: 50px;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+    opacity: 9 !important;
+      }
     }
 
     .input-box {
